@@ -1,0 +1,19 @@
+
+:::     Information     :::
+:::::::::::::::::::::::::::
+
+1. Provides user information.
+
+2|3. User Configurations:
+    The user must configure two cars by choosing from 
+    a list of available cars or add a new one.
+
+    OPTIONS
+      2. Configure Car 1
+
+      3. Configure Car 2
+
+4. Calculates loan based on provided cars and additional
+   parameters.
+
+5. Exits program.

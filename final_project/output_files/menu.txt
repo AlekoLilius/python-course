@@ -1,0 +1,13 @@
+
+:::        MENU         :::
+:::::::::::::::::::::::::::
+
+::: 1. INFORMATION      :::
+
+::: 2. CAR 1 CONFIG     :::
+
+::: 3. CAR 2 CONFIG     :::
+
+::: 4. CALCULATE LOAN   :::
+
+::: 5. EXIT PROGRAM     :::
