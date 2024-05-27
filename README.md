@@ -2,4 +2,4 @@
 
 One month hands-on Python training course. 
 
-Weekly assignments and group projects, as well as a final project completed.
+Weekly assignments and group projects, as well as a final project done.
