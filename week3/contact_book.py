@@ -21,7 +21,7 @@ def search_contact():
     search_results = []
     search = input("Search: ")
     for contact in contacts:
-        if search in contact.lower():
+        if search.lower() in contact.lower():
             search_results.append(contact)
     
     print(f"\n      ::: Search List :::\n")
