@@ -175,7 +175,8 @@ pyrightconfig.json
 
 # Personal files
 requirements.txt
-output_files/car1_config.txt
-output_files/car2_config.txt
+final_project/output_files/car1_config.txt
+final_project/output_files/car2_config.txt
+web_files
 
 # End of https://www.toptal.com/developers/gitignore/api/python

@@ -4,11 +4,11 @@
 
 ::: 1. INFORMATION      :::
 
-::: 2. CAR 1 CONFIG     :::
+✔✔✔ 2. CAR 1 CONFIG     ✔✔✔
 
 ::: 3. CAR 2 CONFIG     :::
 
-::: 4. USER CONFIG      :::
+✔✔✔ 4. USER CONFIG      ✔✔✔
 
 ::: 5. CALCULATE LOAN   :::
 

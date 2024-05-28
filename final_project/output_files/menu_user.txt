@@ -8,7 +8,7 @@
 
 ::: 3. CAR 2 CONFIG     :::
 
-::: 4. USER CONFIG      :::
+✔✔✔ 4. USER CONFIG      ✔✔✔
 
 ::: 5. CALCULATE LOAN   :::
 
