@@ -71,9 +71,32 @@ def give_recommendation(menu_items):
         loan_car2 = calculate_loan(2)
         total_cost_car2 = gas_cost_car2 + maintenance_car2 + loan_car2
 
-        if total_cost_car1 < total_cost_car2:
-            print(f"{cars[1].model} is recommended.")
+        car1_mention, car2_mention = '', ''
+        if cars[1].make == cars[2].make:
+            car1_mention = cars[1].model
+            car2_mention = cars[2].model
         else:
-            print(f"{cars[2].model} is recommended.")
+            car1_mention = cars[1].make
+            car2_mention = cars[2].make
+        if total_cost_car1 < total_cost_car2:
+            print(f"{cars[1].make} is recommended. Based on the following factors:")
+        else:
+            print(f"{cars[2].make} is recommended. Based on the following factors:")
+
+        print("\nTOTAL COST:")
+        print(f"{car1_mention} = {total_cost_car1:.2f}€")
+        print(f"{car2_mention} = {total_cost_car2:.2f}€")
+
+        print("\nGAS COST:")
+        print(f"{car1_mention} = {gas_cost_car1:.2f}€")
+        print(f"{car2_mention} = {gas_cost_car2:.2f}€")
+
+        print("\nMAINTENANCE COST:")
+        print(f"{car1_mention} = {maintenance_car1:.2f}€")
+        print(f"{car2_mention} = {maintenance_car2:.2f}€")
+
+        print("\nLOAN COST:")
+        print(f"{car1_mention} = {loan_car1:.2f}€")
+        print(f"{car2_mention} = {loan_car2:.2f}€")
     else:
         print("Please configure both cars and additional parameters.")

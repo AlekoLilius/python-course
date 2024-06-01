@@ -2,9 +2,6 @@ import os
 
 import helper
 import web_handler as wh
-# ideas
-# gives suggestion for which car the user means if it's not in the list of cars
-# 
 
 def setup():
     """Setup the application, fetching necesary data."""

@@ -136,6 +136,3 @@ def get_down_payment():
             return 0
         else:
             print("\nWorng format! Needs to be 'y' or 'n'.\n")
-
-def lookup_car():
-    pass
