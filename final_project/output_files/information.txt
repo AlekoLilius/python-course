@@ -22,7 +22,7 @@
 
       4. Configure additional user parameters
 
-5. Calculates loan based on provided cars and additional
+5. Calculates loan and gives recommendation based on provided cars and additional
    user parameters.
 
 6. Exits program.
