@@ -4,40 +4,68 @@ import helper
 import web_handler as wh
 
 def setup():
-    """Setup the application, fetching necesary data."""
+    """
+    
+    Setup the application, fetching necesary data.
+    
+    """
     wh.fetch_mpg()
     wh.fetch_maintenance()
 
 def load_file(file):
-    """Loads the content of a file and returns it as a string."""
+    """
+    
+    Loads the content of a file and returns it as a string.
+    
+    Parameters:
+        file (str): The name of the file to load.
+    
+    Returns:
+        str: The content of the file.
+    
+    """
     file_path = os.path.realpath(file)
     with open(file_path, 'r') as file:
         return file.read()
     
 def print_menu(menu_items):
-    """Prints the appropriate menu depending on users configurations."""
+    """
+    
+    Prints the appropriate menu depending on users configurations.
+    
+    Parameters:
+        menu_items (list): The menu items to print.
+    
+    Returns:
+        None
+    
+    """
     if all(menu_items):
-        print(load_file("final_project/output_files/menu_user_car12.txt"))
+        print(load_file("output_files/menu_user_car12.txt"))
     elif menu_items[0] and menu_items[1]:
-        print(load_file("final_project/output_files/menu_car12.txt"))
+        print(load_file("output_files/menu_car12.txt"))
     elif menu_items[0] and menu_items[2]:
-        print(load_file("final_project/output_files/menu_user_car1.txt"))
+        print(load_file("output_files/menu_user_car1.txt"))
     elif menu_items[1] and menu_items[2]:
-        print(load_file("final_project/output_files/menu_user_car2.txt"))
+        print(load_file("output_files/menu_user_car2.txt"))
     elif menu_items[0]:
-        print(load_file("final_project/output_files/menu_car1.txt"))
+        print(load_file("output_files/menu_car1.txt"))
     elif menu_items[1]:
-        print(load_file("final_project/output_files/menu_car2.txt"))
+        print(load_file("output_files/menu_car2.txt"))
     elif menu_items[2]:
-        print(load_file("final_project/output_files/menu_user.txt"))
+        print(load_file("output_files/menu_user.txt"))
     else:
-        print(load_file("final_project/output_files/menu.txt"))
+        print(load_file("output_files/menu.txt"))
 
 def main():
-    """The main function of the application."""
+    """
+    
+    The main function of the application.
+    
+    """
     setup()
     os.system('cls||clear')
-    print(load_file('final_project/output_files/car_loan_logo.txt'))
+    print(load_file('output_files/car_loan_logo.txt'))
 
     valid_actions = '123456'
     menu_items = [False, False, False]
@@ -51,14 +79,14 @@ def main():
 
         print('')
         match action:
-            case '1' : print(load_file("final_project/output_files/information.txt"))
+            case '1' : print(load_file("output_files/information.txt"))
             case '2' : menu_items[0] = helper.configure_car(1)
             case '3' : menu_items[1] = helper.configure_car(2)
             case '4' : menu_items[2] = helper.configure_user()
             case '5' : helper.give_recommendation(menu_items)
             case '6' : break
     
-    print(load_file('final_project/output_files/exit_program.txt'))
+    print(load_file('output_files/exit_program.txt'))
 
 if __name__ == '__main__':
     main()

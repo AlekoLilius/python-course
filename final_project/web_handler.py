@@ -33,7 +33,7 @@ def fetch_mpg():
 
     export = json.dumps(table_data)
 
-    with open(os.path.realpath('final_project/web_files/cars_mpg.json'), 'w') as f:
+    with open(os.path.realpath('web_files/cars_mpg.json'), 'w') as f:
         f.write(export)
 
 def fetch_maintenance():
@@ -52,6 +52,6 @@ def fetch_maintenance():
 
     export = json.dumps(table_data)
 
-    with open(os.path.realpath('final_project/web_files/cars_maintenance.json'), 'w') as f:
+    with open(os.path.realpath('web_files/cars_maintenance.json'), 'w') as f:
         f.write(export)
 

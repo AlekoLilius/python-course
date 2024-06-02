@@ -3,7 +3,17 @@ import os
 import json
 
 def is_float(string):
-    """Checks if string is a float"""
+    """
+    
+    Checks if string is a float.
+    
+    Parameters:
+        string (str): The string to check.
+    
+    Returns:
+        bool: True if string is a float, False otherwise.
+    
+    """
     try:
         float(string)
         return True
@@ -11,7 +21,14 @@ def is_float(string):
         return False
 
 def get_vehicle_details():
-    """Gets user input for vehicle details"""
+    """
+    
+    Gets user input for vehicle details.
+    
+    Returns:
+        tuple: A tuple containing the vehicle details.
+    
+    """
     make, model, year, mileage, fuel_efficiency = '', '', '', 0, -1
     
     # Get make
@@ -44,7 +61,7 @@ def get_vehicle_details():
         print("\nWrong format! Needs to be number within 0-50000.\n")
 
     # Load mpg data
-    with open(os.path.realpath('final_project/web_files/cars_mpg.json'), 'r') as f:
+    with open(os.path.realpath('web_files/cars_mpg.json'), 'r') as f:
         cars_mpg = json.load(f)
     # Check if car model is in list of cars
     for car in cars_mpg:
@@ -63,10 +80,20 @@ def get_vehicle_details():
     return make, model, year, mileage, fuel_efficiency
 
 def get_maintenance(model):
-    """Gets maintenance costs if it exists, otherwise get it from user input"""
+    """
+    
+    Gets maintenance costs if it exists, otherwise get it from user input.
+    
+    Parameters:
+        model (str): The car model.
+    
+    Returns:
+        int: The maintenance costs.
+    
+    """
     maintenance = -1
     # Load maintenance data
-    with open(os.path.realpath('final_project/web_files/cars_maintenance.json'), 'r') as f:
+    with open(os.path.realpath('web_files/cars_maintenance.json'), 'r') as f:
         cars_maintenance = json.load(f)
     # Check if car model is in list of cars
     for car in cars_maintenance:
@@ -86,7 +113,14 @@ def get_maintenance(model):
 
 
 def get_expected_price():
-    """Gets user input for expected price of a car"""
+    """
+    
+    Gets user input for expected price of a car.
+    
+    Returns:
+        int: The expected price of the car.
+
+    """
     while True:
         expected_price = input("Enter expected price for the car in € (ex. 5000, 10000, 20000): ")
         if expected_price.strip().isdigit() and 100 <= int(expected_price) <= 1000000:
@@ -94,7 +128,14 @@ def get_expected_price():
         print("\nWrong format! Needs to be a number within 100-1000000.\n")
 
 def get_driving_habits():
-    """Gets user input for driving habits"""
+    """
+    
+    Gets user input for driving habits.
+    
+    Returns:
+        list: The driving habits.
+
+    """
     res = []
     weekday_mileage, weekend_mileage = 0, 0
     while True:
@@ -114,7 +155,14 @@ def get_driving_habits():
     return res
 
 def get_interest_rate():
-    """Gets user input for interest rate of the loan"""
+    """
+    
+    Gets user input for interest rate of the loan.
+    
+    Returns:
+        float: The interest rate of the loan.
+
+    """
     while True:
         interest_rate = input("Enter interest rate for the loan in % (ex. 0, 2.5, 5): ")
         if is_float(interest_rate.strip()) and 0 <= float(interest_rate) <= 100:
@@ -122,7 +170,14 @@ def get_interest_rate():
         print("\nWrong format! Needs to be a number within 0-100.\n")
 
 def get_down_payment():
-    """Gets user input for down payment"""
+    """
+    
+    Gets user input for down payment.
+    
+    Returns:
+        int: The down payment.
+
+    """
     while True:
         down_payment = input("Do you want to add down payment? (y/n): ")
         if down_payment.strip().lower() == 'y':
